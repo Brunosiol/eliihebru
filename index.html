@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Elizândra 💖</title>
+    <style>
+        body {
+            background-color: #800080;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+            margin-top: 30px;
+            font-size: 40px;
+        }
+
+        p {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .slides {
+            display: none;
+        }
+
+        .slides img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        .coracao {
+            position: absolute;
+            color: red;
+            animation: cair 5s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes cair {
+            0% {top: -50px;}
+            100% {top: 100vh;}
+        }
+
+        audio {
+            margin-top: 20px;
+        }
+       .contador {
+  text-align: center;
+  background-color: #ffe6e6;
+  padding: 30px 20px;
+  margin: 40px 0;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.contador h2 {
+  color: #b30000;
+  font-size: 26px;
+}
+    </style>
+</head>
+<head>
+  <style>
+    .cartinha {
+      color: white;
+      text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,  
+        -1px  1px 0 #000,  
+         1px  1px 0 #000;
+      font-size: 20px;
+      line-height: 1.6;
+      text-align: center;
+      padding: 20px;
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: rgba(0,0,0,0.3);
+      border-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+
+    <h1>Para Elizândra 💖</h1>
+    <p>Minha preta, eu te amo mais do que tudo nesse mundo! 💞</p>
+
+    <div class="slideshow-container">
+        <div class="slides">
+            <img src="imagens/foto1.JPEG">
+        </div>
+        <div class="slides">
+            <img src="imagens/foto2.JPEG">
+        </div>
+        <div class="slides">
+            <img src="imagens/foto3.JPEG">
+        </div>
+        <div class="slides">
+            <img src="imagens/foto4.JPEG">
+        </div>
+        <div class="slides">
+            <img src="imagens/foto5.JPEG">
+        </div>
+        <div class="slides">
+            <img src="imagens/foto6.JPEG">
+        </div>
+        <div class="slides">
+            <img src="imagens/foto7.JPEG">
+        </div>
+        <!-- Pode adicionar mais -->
+    </div>
+
+    <audio controls autoplay loop>
+        <source src="musica.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
+ <div class="contador">
+  <h2>❤️ Estamos juntos há <span id="tempoJuntos"></span> dias! ❤️</h2>
+</div>
+    <script>
+        function criarCoracao() {
+            const coracao = document.createElement('div');
+            coracao.classList.add('coracao');
+            coracao.style.left = Math.random() * 100 + 'vw';
+            coracao.style.fontSize = (Math.random() * 30 + 20) + 'px';
+            coracao.innerHTML = '❤️';
+            document.body.appendChild(coracao);
+            setTimeout(() => {
+                coracao.remove();
+            }, 5000);
+        }
+        setInterval(criarCoracao, 300);
+
+        let slideIndex = 0;
+        mostrarSlides();
+
+        function mostrarSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(mostrarSlides, 3000); // Muda a cada 3 segundos
+        }
+    </script>
+<script>
+  // Data que vocês começaram a namorar (ano, mês -1, dia)
+  const dataNamoro = new Date(2024, 1, 15); // 15 de fevereiro de 2024
+  const hoje = new Date();
+
+  let anos = hoje.getFullYear() - dataNamoro.getFullYear();
+  let meses = hoje.getMonth() - dataNamoro.getMonth();
+  let dias = hoje.getDate() - dataNamoro.getDate();
+
+  if (dias < 0) {
+    meses -= 1;
+    const ultimoMes = new Date(hoje.getFullYear(), hoje.getMonth(), 0);
+    dias += ultimoMes.getDate();
+  }
+
+  if (meses < 0) {
+    anos -= 1;
+    meses += 12;
+  }
+
+  document.getElementById('tempoJuntos').innerText = 
+    `${anos} ano${anos !== 1 ? 's' : ''}, ${meses} mês${meses !== 1 ? 'es' : ''} e ${dias} dia${dias !== 1 ? 's' : ''}`;
+</script>
+</body>
+</html>
+<div class="cartinha">
+  <h2>💌 Uma cartinha pra você, meu amor:</h2>
+  <p>
+    Minha preta linda, você é a melhor parte da minha vida. Desde que você chegou, tudo ganhou mais cor, mais sentido, mais amor.<br><br>
+    Seu sorriso ilumina meus dias, seu abraço é meu refúgio, sua voz é minha melodia favorita.<br><br>
+    Eu te amo mais do que palavras podem explicar, mais do que qualquer coisa nesse mundo. Você é meu amor, minha paz, minha alegria, meu tudo.<br><br>
+    Obrigado por ser quem você é, por existir na minha vida e por me fazer tão feliz.<br><br>
+    Que esse Dia dos Namorados seja mais um capítulo lindo da nossa história, e que eu possa te fazer sorrir, te cuidar e te amar por todos os dias da minha vida. 💖
+  </p>
+</div>
